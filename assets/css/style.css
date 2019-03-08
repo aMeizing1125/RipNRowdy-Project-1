@@ -1,0 +1,77 @@
+body {
+    background-image: url(../images/background5.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.bannerHead {
+    color:white;
+    margin-top: 40px;
+    float: center;
+    line-height: .5;
+}
+
+.title {
+    font-family: 'Quattrocento', serif;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.carousel {
+    margin: auto;
+    margin-top: 40px;
+    max-width: 760px;
+    float: center;
+}
+
+.carousel-inner img {
+    margin: auto;
+    max-height: 503px;
+  }
+
+  footer {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      padding: 40px;
+  }
+
+  .nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    font-family: 'Arvo', serif;
+}
+.nav li{
+    position: relative;
+    display: block;
+    text-align: center;
+    float: center;
+    margin-left: 20px;
+}
+.nav a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    float: center;
+    color: white; 
+    text-decoration: inherit; 
+}
+
+.nav ul {
+    text-align: center;
+    display: block;
+    float: center;
+}
