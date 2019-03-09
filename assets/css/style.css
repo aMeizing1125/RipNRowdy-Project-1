@@ -1,42 +1,4 @@
 body {
-<<<<<<< HEAD
-  background-image: url(../images/background5.jpg);
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-}
-
-.bannerHead {
-  color:white;
-  margin-top: 40px;
-  float: center;
-  line-height: .5;
-}
-
-.title {
-  font-family: 'Quattrocento', serif;
-  font-size: 50px;
-  margin-bottom: 0;
-}
-
-.subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.carousel {
-  margin: auto;
-  margin-top: 40px;
-  max-width: 760px;
-  float: center;
-}
-
-.carousel-inner img {
-  margin: auto;
-  max-height: 503px;
-=======
     background-image: url(../images/background5.jpg);
     background-position: center; 
     background-repeat: no-repeat; 
@@ -81,7 +43,6 @@ h6 {
     margin: auto;
     max-height: 503px;
 
->>>>>>> ecdd814915994f43455fc3d5d039980d8b985727
 }
 
 footer {
