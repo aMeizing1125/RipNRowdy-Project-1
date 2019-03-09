@@ -12,17 +12,24 @@ body {
     line-height: .5;
 }
 
-.title {
-    font-family: 'Quattrocento', serif;
-    font-size: 50px;
+h1 {
+    font-family: 'Abril Fatface', cursive;
     margin-bottom: 0;
 }
 
-.subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+h3 {
+    font-family: 'Cormorant Upright', serif;
+}
+
+h4 {
+    font-family:'Montserrat', sans-serif;
     margin-top: 0;
     margin-bottom: 40px;
+}
+
+h6 {
+    font-family: 'Abril Fatface', cursive;
+    margin-top: 5px;
 }
 
 .carousel {
@@ -30,32 +37,33 @@ body {
     margin-top: 40px;
     max-width: 760px;
     float: center;
-    
 }
 
 .carousel-inner img {
     margin: auto;
     max-height: 503px;
-    border-radius: 20px;
-  }
 
-  footer {
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      padding: 40px;
-  }
+}
 
-  .nav{
+footer {
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    padding: 40px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.nav{
     border:1px solid #ccc;
     border-width:1px 0;
     list-style-type: none;
     margin-left: 0;
     padding: 0;
     text-align: center;
-    padding: 10px;
     justify-content: center;
-    font-family: 'Arvo', serif;
 }
+
 .nav li{
     position: relative;
     display: block;
@@ -70,6 +78,8 @@ body {
     float: center;
     color: white; 
     text-decoration: inherit; 
+    margin: 0;
+    margin-top: 0;
 }
 
 .nav ul {
@@ -78,9 +88,10 @@ body {
     float: center;
 }
 
-#maps {
-    background-image: url(../images/celtic.jpg);
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
+.infoContainer {
+    border: 1px black;
+    margin-top: 40px;
+    width: 55%;
+    color: white;
 }
+
