@@ -35,13 +35,17 @@ body {
 .carousel-inner img {
     margin: auto;
     max-height: 503px;
-  }
+
+}
 
   footer {
       color: white;
       font-family: 'Montserrat', sans-serif;
       padding: 40px;
-  }
+      background-color: rgb(24, 24, 24);
+      width: 100%;
+      margin-top: 40px;
+}
 
   .nav{
     border:1px solid #ccc;
@@ -74,4 +78,10 @@ body {
     text-align: center;
     display: block;
     float: center;
+}
+
+.infoContainer {
+ background-color: lightgray;
+ border: 1px black;
+ margin-top: 40px;
 }
