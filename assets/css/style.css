@@ -77,3 +77,10 @@ body {
     display: block;
     float: center;
 }
+
+#maps {
+    background-image: url(../images/celtic.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
