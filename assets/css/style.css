@@ -30,11 +30,13 @@ body {
     margin-top: 40px;
     max-width: 760px;
     float: center;
+    
 }
 
 .carousel-inner img {
     margin: auto;
     max-height: 503px;
+    border-radius: 20px;
   }
 
   footer {

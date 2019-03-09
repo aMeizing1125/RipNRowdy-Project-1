@@ -1,3 +1,5 @@
+// ----- LINKING IN FIREBASE ----- //
+
 var config = {
     apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
     authDomain: "bar-crawl-project-f4740.firebaseapp.com",
@@ -7,3 +9,10 @@ var config = {
     messagingSenderId: "917856200360"
   };
   firebase.initializeApp(config);
+
+// ----- GLOBAL VARIABLES ----- //
+
+var placeholder
+
+// ----- BUTTON CONTROLS ----- //
+
