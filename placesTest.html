@@ -14,6 +14,10 @@
         height: 80%;
       }
 
+      [data-state='selected']{
+        background-color: blue;
+      }
+
       #displayResults{
           display: flex;
           justify-content: center;
@@ -104,6 +108,8 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+      var selectedBars = [];
+
       var map;
 
       function initMap() {
@@ -165,6 +171,8 @@
           //This creates the new div for each bar
           var thisBar = $("<div>").text(JSON.stringify(place.name));
           thisBar.attr("data-rating", JSON.stringify(place.rating));
+          thisBar.attr("data-id", place.place_id);
+          thisBar.attr("state", "unselected");
           thisBar.addClass("bar");
           thisRating = $("<div>").text("Rating: " + JSON.stringify(place.rating));
           thisImageUrl = place.photos[0].getUrl({
@@ -182,7 +190,26 @@
           bounds.extend(place.geometry.location);
         }
         map.fitBounds(bounds);
+        allowClicks();
       }
+
+      function allowClicks(){
+        $(".bar").on("click", function(){
+          clickedBar = $(this);
+          selectedBars.push(clickedBar.attr("data-id"));
+          if (clickedBar.attr("data-selected") === "unselected"){
+            console.log("unselected");
+            console.log(clickedBar.attr("data-state"));
+            clickedBar.attr("data-state", "selected");
+          }
+          else{
+            console.log("selected");
+            clickedBar.attr("data-state", "unselected");
+          }
+          console.log(selectedBars);
+        })
+      } 
+
     </script>
   </head>
   <body>
