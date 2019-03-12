@@ -95,3 +95,10 @@ footer {
   width: 55%;
   color: white;
 }
+
+#meiPic {
+  max-height: 220px;
+  /* float: left; */
+
+
+}
