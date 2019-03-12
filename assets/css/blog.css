@@ -13,12 +13,13 @@ body {
 }
 
 .bannerHead {
+    background-color: black;
     color:white;
     margin-top: 40px;
     float: center;
     line-height: .5;
-    background: black;
     width: 100%;
+    opacity: .9;
 }
 
 h1 {
