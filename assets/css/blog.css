@@ -17,6 +17,8 @@ body {
     margin-top: 40px;
     float: center;
     line-height: .5;
+    background: black;
+    width: 100%;
 }
 
 h1 {
@@ -105,11 +107,6 @@ footer {
 }
 
 
-    color:white;
-    margin-top: 40px;
-    float: center;
-    line-height: .5;
-}
 
 h1 {
     font-family: 'Abril Fatface', cursive;
@@ -161,6 +158,7 @@ footer {
     padding: 0;
     text-align: center;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .nav li{
