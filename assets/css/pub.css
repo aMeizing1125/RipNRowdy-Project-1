@@ -7,6 +7,14 @@ body {
     padding: auto;
 }
 
+header {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-weight: bolder;
+}
+
 h2 {
     font-size: 22px;
     margin: 0 0 5px 0;
@@ -36,13 +44,15 @@ li:nth-child(odd) {
 .bar{
     width: 300px;
     height: 300px;
-    border: 2px solid black;
+    border: 2px solid antiquewhite;
     border-radius: 20px;
     background-color: sandybrown;
-    opacity: .7;
+    opacity: .9;
     margin: 20px;
     overflow: hidden;
     text-align: center;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .bar img {
@@ -51,7 +61,8 @@ li:nth-child(odd) {
 }
   
 #map {
-    height: 80%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 #displayResults{
@@ -105,7 +116,8 @@ li:nth-child(odd) {
     color: antiquewhite;
     width: 100%;
     height: 40px;
-    margin: 5px 0 0 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border: 1px solid black;
     border-radius: 20px;
 }
