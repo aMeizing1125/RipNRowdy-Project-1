@@ -1,15 +1,18 @@
 body {
-  background-image: url(../images/background5.jpg);
-  background-position: center; 
+  background-image: url(../images/blogBackground.jpg);
+  background-position: center top; 
   background-repeat: no-repeat; 
   background-size: cover;
 }
 
 .bannerHead {
+  background-color: black;
   color:white;
   margin-top: 40px;
   float: center;
   line-height: .5;
+  width: 100%;
+  opacity: .9;
 }
 
 h1 {
@@ -62,6 +65,7 @@ footer {
   padding: 0;
   text-align: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .nav li{
