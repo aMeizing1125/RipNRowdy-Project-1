@@ -1,15 +1,18 @@
 body {
-  background-image: url(../images/background5.jpg);
-  background-position: center; 
+  background-image: url(../images/blogBackground.jpg);
+  background-position: center top; 
   background-repeat: no-repeat; 
   background-size: cover;
 }
 
 .bannerHead {
+  background-color: black;
   color:white;
   margin-top: 40px;
   float: center;
   line-height: .5;
+  width: 100%;
+  opacity: .9;
 }
 
 h1 {
@@ -83,6 +86,7 @@ footer {
   margin-top: 0;
 }
 
+
 .nav ul {
   text-align: center;
   display: block;
@@ -96,9 +100,12 @@ footer {
   color: white;
 }
 
-#meiPic {
+#meiPic  {
   max-height: 220px;
   /* float: left; */
 
 
+}
+#alyssaPic {
+  max-width: 220px;
 }
