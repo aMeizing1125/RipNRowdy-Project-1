@@ -1,0 +1,123 @@
+body {
+    background: url(../images/pubwallpaper.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: auto;
+}
+
+header {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 25px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 0 0 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 271px;
+    width: 200px;
+    overflow-y: scroll;
+}
+
+li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+li:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+
+.bar{
+    width: 300px;
+    height: 300px;
+    border: 2px solid antiquewhite;
+    border-radius: 20px;
+    background-color: sandybrown;
+    opacity: .9;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bar img {
+    height: 300px !important;
+    width: 300px !important;
+}
+  
+#map {
+    height: 100%;
+    border-radius: 15px;
+}
+
+#displayResults{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+}
+
+#content{
+    height: 400px;
+    width: 100%;
+}
+
+#right-panel {
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+  }
+
+#right-panel select, #right-panel input {
+    font-size: 15px;
+}
+
+#right-panel select {
+    width: 100%;
+}
+
+#right-panel i {
+    font-size: 12px;
+}
+#right-panel {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 5px;
+    top: 60%;
+    margin-top: -195px;
+    height: 650px;
+    width: 600px;
+    padding: 5px;
+    z-index: 5;
+    border: 1px solid #999;
+    background: #fff;
+}
+
+#more {
+    background-image: url(..//images/clover.jpg);
+    background-size: 50% 50%;
+    background-repeat: repeat;
+    font-size: 30px;
+    color: antiquewhite;
+    width: 100%;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
