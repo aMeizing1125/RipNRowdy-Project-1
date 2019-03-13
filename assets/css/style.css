@@ -66,6 +66,8 @@ footer {
   text-align: center;
   justify-content: center;
   margin-top: 40px;
+  background-color: black; 
+  opacity: .9;
 }
 
 .nav li{
@@ -97,4 +99,18 @@ footer {
   margin-top: 40px;
   width: 55%;
   color: white;
+}
+
+#meiPic  {
+  max-height: 220px;
+  /* float: left; */
+
+
+}
+#alyssaPic {
+  max-width: 220px;
+}
+
+.blogBtn {
+    width: 98%;
 }
