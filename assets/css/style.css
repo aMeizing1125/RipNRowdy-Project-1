@@ -86,7 +86,6 @@ footer {
   margin-top: 0;
 }
 
-
 .nav ul {
   text-align: center;
   display: block;
@@ -98,14 +97,4 @@ footer {
   margin-top: 40px;
   width: 55%;
   color: white;
-}
-
-#meiPic  {
-  max-height: 220px;
-  /* float: left; */
-
-
-}
-#alyssaPic {
-  max-width: 220px;
 }
