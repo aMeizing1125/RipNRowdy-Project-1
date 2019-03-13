@@ -2,84 +2,183 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/reset.css">    
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-  
-    <script src="app.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Beer Crawl - Blog</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/beerIcon.png" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arvo|Cinzel:700|Cormorant+Upright|Hanuman|Montserrat|Playfair+Display+SC|Pridi|Quattrocento"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/blog.css">
+  <script src="app.js"></script>
 </head>
 
+
 <body>
-    <ul class="nav justify-content-center">
-        <li class="nav">
-            <a class="nav-link active " href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="team.html">Team</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="mapItOut.html">Maps</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-        </li>
-    </ul>
-<h1 id="headline">Wanna Talk about Beer?</h1>
-    <div class="banner">
-      
+  <div class="container">
+    <div class="bannerHead text-center">
+      <h1 class="title">BEER CRAWL PAGE</h1>
+      <h3 class="subtitle">- create your night out -</h3>
     </div>
- 
-    <div class="textArea">
-        <p>need some text some where to test some shit. </p>
+  </div>
+
+  <ul class="nav">
+    <li class="nav-item text-center">
+      <h3><a class="nav-link active" href="index.html">Home</a></h3>
+    </li>
+    <li class="nav-item text-center">
+      <h3><a class="nav-link" href="blog.html">Blog</a></h3>
+    </li>
+    <li class="nav-item text-center">
+      <h3><a class="nav-link" href="contact.html">Team Contact</a></h3>
+    </li>
+    <li class="nav-item text-center">
+      <h3><a class="nav-link" href="maps.html">Map Out Your Trip</a></h3>
+    </li>
+  </ul>
+  <div class="blog">
+    <div class="card-deck">
+      <div class="card m-5">
+        <a href='https://www.oldemeckbrew.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="ombGoogleCalendar" class="m-1 blogBtn"> Add to Google Calendar</button> <!--Address OMB is 4150 Yancey Rd, Charlotte, NC 28217-->
+        <img src="assets/images/OMB.blog.png" class="card-img-top"
+          alt="Three beautifully colored beers with a perfect view of the Charlotte Skyline.">
+        <div class="card-body">
+          <h5 class="card-title">OMB Always Excellent</h5>
+          <p class="card-text">In my opinion, the first brewery to establish Charlotte as a major producer of quality
+            Craft Beer. OMB has the unique ability to never make a beer I wouldn't order again. Everything on the menu
+            is
+            very well balanced beer and food. Enjoying the atmosphere while sitting under a shaded tree eating some
+            German
+            potato salad with a delicious Hornest's Nest beer to wash it down. Sounds like the most perfect day. Adding
+            this location to your personal bar crawl will always be a crowd pleaser. It is a must on every beer
+            drinkers
+            checklist. </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Jan. 2019</small>
+        </div>
+      </div>
+      <div class="card m-5">
+        <a href='http://www.discoverlennyboy.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="lennyBoyGoogleCalendar" class="m-1 blogBtn">Add to Google Calendar</button><!--Address Lenny Boy 3000 S Tryon St, Charlotte, NC 28217-->
+        <img src="assets/images/lennyBoy.blog.jpg" class="card-img-top"
+          alt="Sunsetting over Lenny Boy's front patio and the lights struggle over the patio are all lit up like fireflies. ">
+        <div class="card-body">
+          <h5 class="card-title">Not Your Ordinary Beer</h5>
+          <p class="card-text">Having Lenny Boy born right here in Charlotte, has spoiled all us with amazing Kombucha
+            and Beer. They have an amazing selection of non-alocholic if that is your fancy beverages. My personal
+            favorite
+            is the Laughing Yoga. With hints of Jasime and just bringing life to your summer and embracing your inner
+            outdoor yogi. Lenny Boy
+            also supports other local breweries by rotating the other local craft beer. Why compet when we can be
+            friends?! </p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Feb. 2019</small>
+        </div>
+      </div>
+      <div class="card m-5">
+        <a href='http://www.redclayciderworks.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="lennyBoyGoogleCalendar" class="m-1 blogBtn">Add to Google Calendar</button><!--Address Red Clay Ciderworks 245 Clanton Rd, Charlotte, NC 28217-->
+        <img src="assets/images/redClayblog.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Carolina Cider - Red Clay Ciderworks</h5>
+          <p class="card-text">Everyone has a friend who can only drink Cider for it wonderful attribute, Gluten-Free.
+            Red Clay is so good you'll drink it anyway. Playing to all pallets, Clay Works offers a variety of tart
+            crips
+            flavor bouqets to sweet lusciousness leaving you wanting more. This isn't your average Cider. Made from
+            real North Carolina apples. </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Mar. 2019</small>
+        </div>
+      </div>
     </div>
     <div class="card-deck">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
 
-    <div class="footer">
-        <ul class="nav justify-content-center">
-            <li class="nav">
-                <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="mapItOut.html">Maps</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-        </ul>
+      <div class="card m-5">
+        <a href='https://www.thecompanystorenoda.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="nodaCompanyStoreGoogleCalendar" class="m-1 blogBtn"> Add to Google Calendar</button>
+        <img src="assets/images/nodaCompanyStoreDumplingLady.png" class="card-img-top"
+          alt="Back porch of the Noda Company Store and the Dumpling Lady's Red Food Truck next to it. Looks like an amzing porch to rest on.">
+        <div class="card-body">
+          <h5 class="card-title">Noda Company Store & Asian Flush</h5>
+          <p class="card-text"> First, yes not a brewery, but they sell the craft brews, and... Asian Flush? What is that. It is a common allergy predominatently Asian people
+            have. Basically, I am allergic to alcohol, so I have an accellerated reaction to EVERYONE ELSE. I absorb it
+            faster, and sober faster. I will turn red. It always starts on the cheeks and goes down. Not to worry, this
+            also means I sober up super quick. It only took a beer anyway.
+            <br>
+            Now on to authentic deliciousness that is the Dumpling Lady. Everyone needs to make a stop at the Noda
+            Company Store when the Dumpling Lady is there. She is a weekly regular Food Truck and provides some of the
+            most true Chinese food. Sorry
+            guys, I have nevereaten a Crab Ragoon or Sweet & Sour Chicken in Taiwan, China, or Japan. And you are in the
+            heart of Noda
+            which makes your personal Bar Crawl an ideal place to start.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Oct. 2018</small>
+        </div>
+      </div>
+      <div class="card m-5">
+        <a href='https://southpark.legionbrewing.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="legionGoogleCalendar" class="m-1 blogBtn">Add to Google Calendar</button>
+        <img src="assets/images/legionBrewerySouthPark.jpg" class="card-img-top"
+          alt="Sunsetting over Lenny Boy's front patio and the lights struggle over the patio are all lit up like fireflies. ">
+        <div class="card-body">
+          <h5 class="card-title">Legion adds Excellence in SouthPark</h5>
+          <p class="card-text"> Legion Brewery has an quality reputation among Charlotte Beer Nuts. But their new
+            location in SouthPark has exceeded my high expectations. One of the owner is from Shelby, NC. That was my
+            place to go when I was in my smalltown. Don't let smalltown fool you, this place is True Excellence. This
+            place has amazing flavors. The menu is well put together and with a full bar, none of your guests will
+            feel pressure to drink beer. My go to is the Sparkle Party, they have 4 flavors. Enjoy getting to know each
+            one. You won't be disappointed. </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Feb. 2019</small>
+        </div>
+      </div>
+      <!-- <div class="card m-5">
+        <a href='http://www.redclayciderworks.com/' target="_blank"><button name="brewery" class="m-1 blogBtn">Visit
+            Site</button></a>
+        <button id="lennyBoyGoogleCalendar" class="m-1 blogBtn">Add to Google Calendar</button>
+        <img src="assets/images/redClayblog.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Carolina Cider - Red Clay Ciderworks</h5>
+          <p class="card-text"> </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated Mar. 2019</small>
+        </div>
+      </div> -->
     </div>
+  </div>
+
+  <div class="loveBeerSendYourStory">
+    <h2>Do you Love Beer too? Share your story and love for good beer. </h2>
+  </div>
+  <footer class="container text-center col-lg-12">Rip n Rowdy Group Project</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/app.js"></script>
+
 </body>
 
 </html>
