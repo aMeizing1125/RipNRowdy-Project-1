@@ -2,63 +2,15 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-var APIKey = "9655ad7887b18cd9176bb5f408b25764";
-
-// Here we are building the URL we need to query the database
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-  "q=Charlotte, US&units=imperial&appid=" + APIKey;
-
-$.ajax({
-  url: queryURL,
-  method: "GET"
-})
-  // We store all of the retrieved data inside of an object called "response"
-  .then(function (response) {
-
-    // Log the queryURL
-    console.log(queryURL);
-
-    // Log the resulting object
-    console.log(response);
-
-    // Creates div tags for information
-    $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-    $(".wind").text("Wind Speed: " + response.wind.speed);
-    $(".humidity").text("Humidity: " + response.main.humidity);
-    $(".temp").text("Temperature (F) " + response.main.temp);
-
-    // Log the data in the console as well
-    console.log("Wind Speed: " + response.wind.speed);
-    console.log("Humidity: " + response.main.humidity);
-    console.log("Temperature (F): " + response.main.temp);
-  });
-
-var config = {
-  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
-  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
-  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
-  projectId: "bar-crawl-project-f4740",
-  storageBucket: "bar-crawl-project-f4740.appspot.com",
-  messagingSenderId: "917856200360"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-
-$('#submit').on('click', function (event) {
-  event.preventDefault();
-  var trainName = $('#trainInput').val().trim();
-  var destination = $('#destinationInput').val().trim();
-  var firstTrainTime = $('#trainTimeInput').val().trim();
-  var frequency = $('#frequencyInput').val().trim();
-
-  database.ref().push({
-    train: trainName,
-    destination: destination,
-    trainTime: firstTrainTime,
-    frequency: frequency
-  });
-});
+// var config = {
+//   apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
+//   authDomain: "bar-crawl-project-f4740.firebaseapp.com",
+//   databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
+//   projectId: "bar-crawl-project-f4740",
+//   storageBucket: "bar-crawl-project-f4740.appspot.com",
+//   messagingSenderId: "917856200360"
+// };
+// firebase.initializeApp(config);
 
 var allBars = {};
 
@@ -126,14 +78,16 @@ function createMarkers(places) {
       "data-rating": JSON.stringify(place.rating),
       "data-address": JSON.stringify(place.formatted_address),
       "data-hours": JSON.stringify(place.opening_hours),
-      "data-price": JSON.stringify(place.price_level)
-    });
+      "data-name": JSON.stringify()
+      "data-price": JSON.stringify(place.price_level)});
+
     thisBar.addClass("bar");
     thisRating = $("<div>").text("Rating: " + JSON.stringify(place.rating));
     thisImageUrl = place.photos[0].getUrl({
       'maxWidth': 300,
       'maxHeight': 300
     });
+
     console.log(thisImageUrl);
     thisImage = $("<img>").attr("src", thisImageUrl);
 
@@ -148,20 +102,23 @@ function createMarkers(places) {
   allowClicks();
 }
 
-function allowClicks() {
-  $(".bar").on("click", function () {
+function allowClicks(){
+  $(".bar").on("click", function(){
     thisBar = $(this);
-    
+
     console.log(thisBar);
     if (thisBar.hasClass("selected")){
       console.log("already selected");
     }
+
     //This should store all of the data from the custom attributes 
     //of the clicked div into an object, then send the object into
     //an array
+
     else{
-      
+
     }
+    
     thisBar.toggleClass("selected");
   });
 }
