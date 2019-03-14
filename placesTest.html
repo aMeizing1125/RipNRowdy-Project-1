@@ -104,21 +104,11 @@
 
       function allowClicks(){
         $(".bar").on("click", function(){
-          clickedBar = $(this);
-          selectedBars.push(clickedBar.attr("data-id"));
-          if (clickedBar.attr("state") === "unselected"){
-            console.log("unselected");
-            console.log(clickedBar.attr("data-state"));
-            clickedBar.attr("data-state", "selected");
-          }
-          else{
-            console.log("selected");
-            clickedBar.attr("state", "unselected");
-          }
-          console.log(selectedBars);
-        })
-      } 
-
+          thisBar = $(this);
+          console.log(thisBar);
+          thisBar.toggleClass("selected");
+        });
+      }
     </script>
   </head>
   <body>
