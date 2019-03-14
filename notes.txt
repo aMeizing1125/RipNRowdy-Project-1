@@ -9,11 +9,20 @@ steps:
 Jonathan's Google Calendar API notes:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1.  Display current weather using open weather maps 
 =======
+=======
+>>>>>>> afddb27fbb54ea40d7b91a750b4335a9138e5f33
 Modifying events with the Google Calendar API (The G Suite Dev Show)
 https://www.youtube.com/watch?v=Qd64idiKZWw
 
 Google Dev Youtube Channel
 https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw
+<<<<<<< HEAD
 >>>>>>> b98293ac68e8026f705b27d505333cf420777ff9
+=======
+=======
+1.  Display current weather using open weather maps 
+>>>>>>> e26235e0f30829769a74b31d0546d456886f04a0
+>>>>>>> afddb27fbb54ea40d7b91a750b4335a9138e5f33

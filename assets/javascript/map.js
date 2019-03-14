@@ -2,21 +2,17 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-var config = {
-  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
-  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
-  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
-  projectId: "bar-crawl-project-f4740",
-  storageBucket: "bar-crawl-project-f4740.appspot.com",
-  messagingSenderId: "917856200360"
-};
-firebase.initializeApp(config);
+// var config = {
+//   apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
+//   authDomain: "bar-crawl-project-f4740.firebaseapp.com",
+//   databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
+//   projectId: "bar-crawl-project-f4740",
+//   storageBucket: "bar-crawl-project-f4740.appspot.com",
+//   messagingSenderId: "917856200360"
+// };
+// firebase.initializeApp(config);
 
-$(".bar").on("click", function(event) {
-  event.preventDefault();
-  var address
-  var 
-});
+var allBars = {};
 
 var map;
 
@@ -78,7 +74,11 @@ function createMarkers(places) {
 
     //This creates the new div for each bar
     var thisBar = $("<div>").text(JSON.stringify(place.name));
-    thisBar.attr("data-rating", JSON.stringify(place.rating));
+    thisBar.attr({
+      "data-rating": JSON.stringify(place.rating),
+      "data-address": JSON.stringify(place.formatted_address),
+      "data-hours": JSON.stringify(place.opening_hours),
+      "data-price": JSON.stringify(place.price_level)});
     thisBar.addClass("bar");
     thisRating = $("<div>").text("Rating: " + JSON.stringify(place.rating));
     thisImageUrl = place.photos[0].getUrl({
@@ -96,4 +96,19 @@ function createMarkers(places) {
     bounds.extend(place.geometry.location);
   }
   map.fitBounds(bounds);
+  allowClicks();
+}
+
+function allowClicks(){
+  $(".bar").on("click", function(){
+    thisBar = $(this);
+    console.log(thisBar);
+    if (thisBar.hasClass("selected")){
+      console.log("already selected");
+    }
+    else{
+      
+    }
+    thisBar.toggleClass("selected");
+  });
 }
