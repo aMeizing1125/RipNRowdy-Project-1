@@ -8,6 +8,31 @@ var APIKey = "9655ad7887b18cd9176bb5f408b25764";
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
   "q=Charlotte, US&units=imperial&appid=" + APIKey;
 
+$.ajax({
+  url: queryURL,
+  method: "GET"
+})
+  // We store all of the retrieved data inside of an object called "response"
+  .then(function (response) {
+
+    // Log the queryURL
+    console.log(queryURL);
+
+    // Log the resulting object
+    console.log(response);
+
+    // Creates div tags for information
+    $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+    $(".wind").text("Wind Speed: " + response.wind.speed);
+    $(".humidity").text("Humidity: " + response.main.humidity);
+    $(".temp").text("Temperature (F) " + response.main.temp);
+
+    // Log the data in the console as well
+    console.log("Wind Speed: " + response.wind.speed);
+    console.log("Humidity: " + response.main.humidity);
+    console.log("Temperature (F): " + response.main.temp);
+  });
+
 var config = {
   apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
   authDomain: "bar-crawl-project-f4740.firebaseapp.com",
@@ -128,20 +153,3 @@ function allowClicks() {
     thisBar.toggleClass("selected");
   });
 }
-
-$.ajax({
-  url: queryURL,
-  method: "GET"
-})
-  // We store all of the retrieved data inside of an object called "response"
-  .then(function (response) {
-
-    // Log the queryURL
-    console.log(queryURL);
-
-    // Log the resulting object
-    console.log(response);
-
-    // Transfer content to HTML
-    
-  });
