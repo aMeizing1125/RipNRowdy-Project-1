@@ -110,7 +110,16 @@ li:nth-child(odd) {
   
 #map {
     height: 100%;
+    width: 60%;
     border-radius: 15px;
+}
+
+#weather {
+    float: right;
+    background-color: antiquewhite;
+    height: 300px;
+    width: 40%;
+    text-align: center;
 }
 
 #displayResults{
