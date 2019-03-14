@@ -99,6 +99,14 @@ li:nth-child(odd) {
     height: 300px !important;
     width: 300px !important;
 }
+
+#barChoices {
+  background-color: white;
+  /* align-content: center;
+  justify-content: center;
+  text-align: center;
+  display: inline-block; */
+}
   
 #map {
     height: 100%;
@@ -115,6 +123,11 @@ li:nth-child(odd) {
 #content{
     height: 400px;
     width: 100%;
+}
+
+#table{
+    display: flex;
+    justify-content: center;
 }
 
 #right-panel {
