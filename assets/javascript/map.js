@@ -102,10 +102,14 @@ function createMarkers(places) {
 function allowClicks(){
   $(".bar").on("click", function(){
     thisBar = $(this);
+    
     console.log(thisBar);
     if (thisBar.hasClass("selected")){
       console.log("already selected");
     }
+    //This should store all of the data from the custom attributes 
+    //of the clicked div into an object, then send the object into
+    //an array
     else{
       
     }
