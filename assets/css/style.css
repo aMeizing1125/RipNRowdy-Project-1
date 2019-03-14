@@ -13,6 +13,7 @@ body {
   line-height: .5;
   width: 100%;
   opacity: .9;
+  padding: 20px;
 }
 
 h1 {
@@ -113,4 +114,11 @@ footer {
 
 .blogBtn {
     width: 98%;
+}
+
+.card-img-top {
+    width: 98%;
+    margin: auto;
+    float: center;
+    margin-top: 2px;
 }
