@@ -1,6 +1,6 @@
 body {
     background-image: url(../images/blogBackground.jpg);
-    background-position: top; 
+    background-position: center top;
     background-repeat: no-repeat; 
     background-size: cover;
 }
@@ -127,6 +127,10 @@ h4 {
 h6 {
     font-family: 'Abril Fatface', cursive;
     margin-top: 5px;
+}
+
+.blogBtn {
+    width: 98%;
 }
 
 .carousel {
