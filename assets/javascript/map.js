@@ -8,10 +8,16 @@ var APIKey = "9655ad7887b18cd9176bb5f408b25764";
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
   "q=Charlotte, US&units=imperial&appid=" + APIKey;
 
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
 $.ajax({
-  url: queryURL,
-  method: "GET"
-})
+    url: queryURL,
+    method: "GET"
+  })
   // We store all of the retrieved data inside of an object called "response"
   .then(function (response) {
 
@@ -26,7 +32,10 @@ $.ajax({
     $(".wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
     $(".humidity").text("Humidity: " + Math.round(response.main.humidity) + " %");
     $(".temp").text("Temperature " + Math.round(response.main.temp) + " °F");
-
+    $(".temp").text("Temperature: " + Math.round(response.main.temp) + " °F");
+    // var description = response.weather[0].description;
+    // toTitleCase(description);
+    $(".conditions").text("Conditions: " + response.weather[0].main + " | " + toTitleCase(response.weather[0].description));
     // // Log the data in the console as well
     // console.log("Wind Speed: " + response.wind.speed);
     // console.log("Humidity: " + response.main.humidity);
@@ -64,7 +73,10 @@ var map;
 
 function initMap() {
   // Create the map.
-  var charlotte = { lat: 35.227085, lng: -80.843124 };
+  var charlotte = {
+    lat: 35.227085,
+    lng: -80.843124
+  };
   map = new google.maps.Map(document.getElementById('map'), {
     center: charlotte,
     zoom: 70
