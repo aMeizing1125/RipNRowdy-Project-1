@@ -48,6 +48,12 @@ h6 {
   max-height: 503px;
 
 }
+.carousel-inner  div img {
+ max-height: 420px;
+ max-width: 720px;
+ overflow: hidden;
+
+}
 
 footer {
   color: white;
