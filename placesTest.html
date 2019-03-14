@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/pub.css">
     <script src="assets/javascript/map.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <title>Place Search Pagination</title>
 
     <header>Never Fear Your Results Are Here!</header>
@@ -28,16 +29,37 @@
           </li>
         </ul>
       
+    
     <div id="content">
         <div id="map"></div>
     </div>
+
+    <div id="table">
+      <table id="barChoices">
+        <thead>
+          <tr>
+            <th>Your Selection</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- formatted_address
+               opening_hours
+               price_level
+               rating
+               name:
+                -->
+        </tbody>
+      </table> 
+    </div>
+
     <!-- <div id="right-panel">
       <h2>Results</h2>
       <ul id="places"></ul>
     </div> -->
-    <button id="more">More results</button>
     <div id="displayResults">
     </div>
+    <button id="more">More results</button>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojybYIVNELkkcEVwpcUOtJTYR1fSx_UI&libraries=places&callback=initMap" async defer></script>
   </body>
 </html>
