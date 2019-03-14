@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/pub.css">
-    <script src="assets/javascript/map.js"></script>
-    <title>Place Search Pagination</title>
-
-    <header>Never Fear Your Results Are Here!</header>
-   
-    <script>
-      // This example requires the Places library. Include the libraries=places
+ // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      var selectedBars = [];
 
       var map;
 
@@ -80,8 +63,6 @@
           //This creates the new div for each bar
           var thisBar = $("<div>").text(JSON.stringify(place.name));
           thisBar.attr("data-rating", JSON.stringify(place.rating));
-          thisBar.attr("data-id", place.place_id);
-          thisBar.attr("state", "unselected");
           thisBar.addClass("bar");
           thisRating = $("<div>").text("Rating: " + JSON.stringify(place.rating));
           thisImageUrl = place.photos[0].getUrl({
@@ -99,39 +80,4 @@
           bounds.extend(place.geometry.location);
         }
         map.fitBounds(bounds);
-        allowClicks();
       }
-
-      function allowClicks(){
-        $(".bar").on("click", function(){
-          clickedBar = $(this);
-          selectedBars.push(clickedBar.attr("data-id"));
-          if (clickedBar.attr("state") === "unselected"){
-            console.log("unselected");
-            console.log(clickedBar.attr("data-state"));
-            clickedBar.attr("data-state", "selected");
-          }
-          else{
-            console.log("selected");
-            clickedBar.attr("state", "unselected");
-          }
-          console.log(selectedBars);
-        })
-      } 
-
-    </script>
-  </head>
-  <body>
-    <div id="content">
-        <div id="map"></div>
-    </div>
-    <!-- <div id="right-panel">
-      <h2>Results</h2>
-      <ul id="places"></ul>
-    </div> -->
-    <button id="more">More results</button>
-    <div id="displayResults">
-    </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojybYIVNELkkcEVwpcUOtJTYR1fSx_UI&libraries=places&callback=initMap" async defer></script>
-  </body>
-</html>
