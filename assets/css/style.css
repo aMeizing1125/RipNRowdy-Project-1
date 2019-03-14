@@ -122,3 +122,52 @@ footer {
     float: center;
     margin-top: 2px;
 }
+
+.teamDiv {
+    overflow: auto;
+    margin: auto;
+    float: center;
+    width: 80%;
+    background-color: black;
+    color: white;
+    opacity: .9;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.boyInfo {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.teamPhotos {
+    overflow: auto;
+    margin:auto;
+    float: left;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.teamBio {
+    margin: auto;
+    float: left;
+    text-decoration: none;
+}
+
+.contactUs {
+    margin: auto;
+    float: center;
+    background-color: black;
+    opacity: .9;
+    color: white;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.panel-title {
+    padding: 20px;
+}
+
+.btn-success {
+    margin-top: 20px;
+}
