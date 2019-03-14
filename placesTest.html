@@ -2,75 +2,79 @@
 <html>
 
 <head>
- <!-- jquery -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
- <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
- <meta charset="utf-8">
- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/pub.css">
- <script src="assets/javascript/map.js"></script>
- <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
- <title>Place Search Pagination</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/pub.css">
+  <script src="assets/javascript/map.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <title>Place Search Pagination</title>
 
- <header>Never Fear Your Results Are Here!</header>
+  <header>Never Fear Your Results Are Here!</header>
 
 
 </head>
 
 <body>
- <ul class="nav">
-   <li class="nav-item">
-     <h3><a class="nav-link active" href="index.html">Home</a></h3>
-   </li>
-   <li class="nav-item">
-     <h3><a class="nav-link" href="blog.html">Blog</a></h3>
-   </li>
-   <li class="nav-item">
-     <h3><a class="nav-link" href="contact.html">Team Contact</a></h3>
-   </li>
-   <li class="nav-item">
-     <h3><a class="nav-link" href="placesTest.html">Map Out Your Trip</a></h3>
-   </li>
- </ul>
+  <ul class="nav">
+    <li class="nav-item">
+      <h3><a class="nav-link active" href="index.html">Home</a></h3>
+    </li>
+    <li class="nav-item">
+      <h3><a class="nav-link" href="blog.html">Blog</a></h3>
+    </li>
+    <li class="nav-item">
+      <h3><a class="nav-link" href="contact.html">Team Contact</a></h3>
+    </li>
+    <li class="nav-item">
+      <h3><a class="nav-link" href="placesTest.html">Map Out Your Trip</a></h3>
+    </li>
+  </ul>
 
 
- <div id="content">
-   <div id="map"></div>
-   <div id="weather">
-     <div id="openweathermap-widget-15"></div>
-     <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 15, cityid: '4460243', appid: '9655ad7887b18cd9176bb5f408b25764', units: 'imperial', containerid: 'openweathermap-widget-15', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();</script>
-   </div>
- </div>
+  <div id="content">
+    <div id="map"></div>
+    <div id="weather">
+      <div class="city"></div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+      <div class="temp"></div>
+      <div class="conditions"></div>
+      <img class="icon">
+    </div>
+  </div>
 
- <div id="table">
-   <table id="barChoices">
-     <thead>
-       <tr>
-         <th>Your Selection</th>
-       </tr>
-     </thead>
-     <tbody>
-       <!-- formatted_address
-              opening_hours
-              price_level
-              rating
-              name:
-               -->
-     </tbody>
-   </table>
- </div>
+  <div id="table">
+    <table id="barChoices">
+      <thead>
+        <tr>
+          <th>Your Selection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- formatted_address
+               opening_hours
+               price_level
+               rating
+               name:
+                -->
+      </tbody>
+    </table>
+  </div>
 
- <!-- <div id="right-panel">
-     <h2>Results</h2>
-     <ul id="places"></ul>
-   </div> -->
- <div id="displayResults">
- </div>
- <button id="more">More results</button>
+  <!-- <div id="right-panel">
+      <h2>Results</h2>
+      <ul id="places"></ul>
+    </div> -->
+  <div id="displayResults">
+  </div>
+  <button id="more">More results</button>
 
- <script
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojybYIVNELkkcEVwpcUOtJTYR1fSx_UI&libraries=places&callback=initMap"
-   async defer></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojybYIVNELkkcEVwpcUOtJTYR1fSx_UI&libraries=places&callback=initMap"
+    async defer></script>
 </body>
 
 </html>
