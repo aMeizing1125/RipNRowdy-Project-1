@@ -32,8 +32,9 @@ $.ajax({
     $(".wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
     $(".humidity").text("Humidity: " + Math.round(response.main.humidity) + " %");
     $(".temp").text("Temperature: " + Math.round(response.main.temp) + " °F");
-    // var description = response.weather[0].description;
-    // toTitleCase(description);
+    var iconcode = response.weather[0].icon;
+    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    $('#wicon').attr('src', iconurl);
     $(".conditions").text("Conditions: " + response.weather[0].main + " | " + toTitleCase(response.weather[0].description));
 
     // // Log the data in the console as well
