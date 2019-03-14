@@ -107,6 +107,11 @@ li:nth-child(odd) {
   text-align: center;
   display: inline-block; */
 }
+
+#wicon {
+    height: 100px !important;
+    width: 100px !important;
+}
   
 #map {
     height: 100%;
