@@ -8,6 +8,12 @@ var APIKey = "9655ad7887b18cd9176bb5f408b25764";
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
   "q=Charlotte, US&units=imperial&appid=" + APIKey;
 
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+ }
+
 $.ajax({
   url: queryURL,
   method: "GET"
@@ -25,13 +31,17 @@ $.ajax({
     $(".city").html("<h1>" + response.name + " Weather Details</h1>");
     $(".wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
     $(".humidity").text("Humidity: " + Math.round(response.main.humidity) + " %");
-    $(".temp").text("Temperature " + Math.round(response.main.temp) + " °F");
+    $(".temp").text("Temperature: " + Math.round(response.main.temp) + " °F");
+    // var description = response.weather[0].description;
+    // toTitleCase(description);
+    $(".conditions").text("Conditions: " + response.weather[0].main + " | " + toTitleCase(response.weather[0].description));
 
     // // Log the data in the console as well
     // console.log("Wind Speed: " + response.wind.speed);
     // console.log("Humidity: " + response.main.humidity);
     // console.log("Temperature (F): " + response.main.temp);
   });
+
 
 var config = {
   apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
