@@ -23,14 +23,15 @@ $.ajax({
 
     // Creates div tags for information
     $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-    $(".wind").text("Wind Speed: " + response.wind.speed);
-    $(".humidity").text("Humidity: " + response.main.humidity);
-    $(".temp").text("Temperature (F) " + response.main.temp);
+    $(".wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
+    $(".humidity").text("Humidity: " + Math.round(response.main.humidity) + " %");
+    $(".temp").text("Temperature " + Math.round(response.main.temp) + " °F");
+    $(".conditions").text("Temperature " + Math.round(response.weather[0].main);
 
-    // Log the data in the console as well
-    console.log("Wind Speed: " + response.wind.speed);
-    console.log("Humidity: " + response.main.humidity);
-    console.log("Temperature (F): " + response.main.temp);
+    // // Log the data in the console as well
+    // console.log("Wind Speed: " + response.wind.speed);
+    // console.log("Humidity: " + response.main.humidity);
+    // console.log("Temperature (F): " + response.main.temp);
   });
 
 var config = {
