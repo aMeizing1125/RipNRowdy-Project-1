@@ -2,19 +2,6 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-<<<<<<< HEAD
-// var config = {
-//   apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
-//   authDomain: "bar-crawl-project-f4740.firebaseapp.com",
-//   databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
-//   projectId: "bar-crawl-project-f4740",
-//   storageBucket: "bar-crawl-project-f4740.appspot.com",
-//   messagingSenderId: "917856200360"
-// };
-// firebase.initializeApp(config);
-
-var allBars = {};
-=======
 var APIKey = "9655ad7887b18cd9176bb5f408b25764";
 
 // Here we are building the URL we need to query the database
@@ -72,7 +59,6 @@ $('#submit').on('click', function (event) {
     frequency: frequency
   });
 });
->>>>>>> 170d515d31ecfdbd756bc44455c32881a6511bd6
 
 var map;
 
