@@ -138,7 +138,6 @@ function createMarkers(places) {
       "data-rating": JSON.stringify(place.rating),
       "data-address": JSON.stringify(place.formatted_address),
       "data-hours": JSON.stringify(place.opening_hours),
-      "data-name": JSON.stringify()
       "data-price": JSON.stringify(place.price_level)});
 
     thisBar.addClass("bar");
