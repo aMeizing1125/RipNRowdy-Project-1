@@ -109,14 +109,21 @@ li:nth-child(odd) {
 }
 
 #weather-backdrop {
-    background-image: url(../images/weather.jpg);
+    background: url(../images/weather.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     width: 40%;
     height: 400px;
+    border-radius: 20px;
+
+    
 }
 
 #wicon {
-    height: 100px !important;
-    width: 100px !important;
+    height: auto;
+    width: auto;
 }
   
 #map {
@@ -126,13 +133,19 @@ li:nth-child(odd) {
 }
 
 #weather {
-    float: right;
-    background-color: antiquewhite;
-    height: 300px;
-    width: 40%;
     text-align: center;
+    background-color: whitesmoke;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    opacity: .8;
+    margin: 10px 10px 10px 10px;
     border-radius: 20px;
-    opacity: .5;
+}
+
+#wdata div {
+    opacity: initial;
 }
 
 #displayResults{
