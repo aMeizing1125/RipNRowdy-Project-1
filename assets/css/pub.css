@@ -152,6 +152,7 @@ li:nth-child(odd) {
 #table{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #right-panel {

@@ -2,6 +2,8 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+var selectedBars = {};
+
 var APIKey = "9655ad7887b18cd9176bb5f408b25764";
 
 // Here we are building the URL we need to query the database
@@ -135,10 +137,12 @@ function createMarkers(places) {
     //This creates the new div for each bar
     var thisBar = $("<div>").text(JSON.stringify(place.name));
     thisBar.attr({
+      "data-name": JSON.stringify(place.name),
       "data-rating": JSON.stringify(place.rating),
-      "data-address": JSON.stringify(place.formatted_address),
+      "data-address": place.formatted_address,
       "data-hours": JSON.stringify(place.opening_hours),
-      "data-price": JSON.stringify(place.price_level)});
+      "data-price": JSON.stringify(place.price_level)
+    });
 
     thisBar.addClass("bar");
     thisRating = $("<div>").text("Rating: " + JSON.stringify(place.rating));
@@ -161,13 +165,35 @@ function createMarkers(places) {
   allowClicks();
 }
 
+function renderTable(){
+  $("#tableBody").empty();
+  keys = Object.keys(selectedBars);
+  console.log(keys);
+  for (i = 0; i < keys.length; i++){
+    thisKey = keys[i];
+    thisBar = selectedBars[thisKey];
+  
+    newRow = $("<tr>");
+    thisName = $("<td>").text(thisBar.name);
+    thisRating = $("<td>").text(thisBar.rating);
+    thisAddress = $("<td>").text(thisBar.address);
+    thisPrice = $("<td>").text(thisBar.price);
+    
+    newRow.append(thisName, thisRating, thisAddress, thisPrice);
+    $("#tableBody").append(newRow);
+  }
+}
+
 function allowClicks(){
   $(".bar").on("click", function(){
     thisBar = $(this);
+    thisBarName = thisBar.attr("data-name");
+    console.log(thisBarName);
 
     console.log(thisBar);
     if (thisBar.hasClass("selected")){
       console.log("already selected");
+      delete selectedBars[thisBarName];
     }
 
     //This should store all of the data from the custom attributes 
@@ -175,9 +201,16 @@ function allowClicks(){
     //an array
 
     else{
-
+      selectedBars[thisBarName] = {};
+      targetObject = selectedBars[thisBarName];
+      targetObject.name = $(this).attr("data-name");
+      targetObject.address = $(this).attr("data-address");
+      targetObject.rating = $(this).attr("data-rating");
+      targetObject.price = $(this).attr("data-price");
     }
     
     thisBar.toggleClass("selected");
+    console.log(selectedBars);
+    renderTable();
   });
 }
