@@ -190,3 +190,8 @@ footer {
 .text-success {
     float: center;
 }
+
+a {
+  text-decoration-color: none;
+  color: green;
+}
