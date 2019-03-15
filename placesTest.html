@@ -35,14 +35,17 @@
 
 
   <div id="content">
-    <div id="map"></div>
-    <div id="weather">
-      <div class="city"></div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
-      <div class="temp"></div>
-      <div class="conditions"></div>
-      <img class="icon">
+    <div id="map">
+    </div>
+    <div id="weather-backdrop">
+      <div id="weather">
+        <div class="city" id=""></div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+        <div class="temp"></div>
+        <div class="conditions"></div>
+        <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+      </div>
     </div>
   </div>
 
@@ -50,16 +53,21 @@
     <table id="barChoices">
       <thead>
         <tr>
-          <th>Your Selection</th>
+          <th>
+            Name
+          </th>
+          <th>
+            Rating
+          </th>
+          <th>
+            Address
+          </th>
+          <th>
+            Price Level
+          </th>
         </tr>
       </thead>
-      <tbody>
-        <!-- formatted_address
-               opening_hours
-               price_level
-               rating
-               name:
-                -->
+      <tbody id="tableBody">
       </tbody>
     </table>
   </div>
@@ -77,4 +85,9 @@
     async defer></script>
 </body>
 
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojybYIVNELkkcEVwpcUOtJTYR1fSx_UI&libraries=places&callback=initMap" async defer></script> -->
+  <!-- Javascript -->
+  <script src="assets/javascript/map.js"></script>
+
+  </body>
 </html>
