@@ -208,9 +208,10 @@ $("#submitButton").on("click", function(){
 var ref = firebase.database().ref('bars/');
 
 ref.on("value", function(snapshot) {
-  console.log(snapshot.val());
+  // console.log(snapshot.val());
+  document.getElementById("testBars").innerHTML = JSON.stringify(snapshot.val());
 }, function (error) {
-   console.log("Error: " + error.code);
+  //  console.log("Error: " + error.code);
 });
 
 
