@@ -178,7 +178,7 @@ function allowClicks(){
     }
     
     thisBar.toggleClass("selected");
-    console.log(selectedBars);
+    // console.log(selectedBars);
     renderTable();
   });
 }
@@ -201,6 +201,9 @@ var database = firebase.database();
 $("#submitButton").on("click", function(){
   event.preventDefault();
   keys = Object.keys(selectedBars);
-  database.ref().set(selectedBars);
-  console.log(keys);
+  database.ref('bars/').set(selectedBars);
+  // console.log(keys);
 });
+
+// var myJSON = JSON.stringify(selectedBars);
+// document.getElementById("testBars").innerHTML = myJSON
