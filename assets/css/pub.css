@@ -52,6 +52,7 @@ li:nth-child(odd) {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    flex-direction: column;
 }
 
 
@@ -182,10 +183,10 @@ li:nth-child(odd) {
 }
 
 #displayResults{
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #content{
@@ -281,6 +282,7 @@ th {
     border-radius: 25px;
     color: white;
     font-size:25px;
+    height: 80px;
 }
 
 @media only screen and (max-width: 625px) {
