@@ -1,18 +1,3 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
-  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
-  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
-  projectId: "bar-crawl-project-f4740",
-  storageBucket: "bar-crawl-project-f4740.appspot.com",
-  messagingSenderId: "917856200360"
-};
-
-firebase.initializeApp(config);
-
-//Defining the database
-var database = firebase.database();
-
 var selectedBars = {};
 
 var APIKey = "9655ad7887b18cd9176bb5f408b25764";
@@ -193,12 +178,36 @@ function allowClicks(){
     }
     
     thisBar.toggleClass("selected");
-    // console.log(selectedBars);
+    console.log(selectedBars);
     renderTable();
   });
 }
 
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
+  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
+  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
+  projectId: "bar-crawl-project-f4740",
+  storageBucket: "bar-crawl-project-f4740.appspot.com",
+  messagingSenderId: "917856200360"
+};
+
+firebase.initializeApp(config);
+
+//Defining the database
+var database = firebase.database();
+
 $("#submitButton").on("click", function(){
+  event.preventDefault();
   keys = Object.keys(selectedBars);
-  // console.log(keys);
+  database.ref().push(selectedBars);
+  console.log(selectedBars);
+});
+
+database.ref().on('value', function(snapshot) {
+  snapshot.forEach(function(thisCrawl) {
+    thisCrawl = $("<p>").text(thisCrawl.val().bars);
+    $("yourCrawl").append(thisCrawl);
+});
 });
