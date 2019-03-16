@@ -276,6 +276,13 @@ th {
     
 }
 
+#submitButton {
+    background-color:  rgb(53, 148, 53);
+    border-radius: 25px;
+    color: white;
+    font-size:25px;
+}
+
 @media only screen and (max-width: 625px) {
     div #weather-backdrop {
       visibility: hidden;
