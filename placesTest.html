@@ -8,29 +8,36 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/pub.css">
-  <!-- Firebase -->
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arvo|Cinzel:700|Cormorant+Upright|Hanuman|Montserrat|Playfair+Display+SC|Pridi|Quattrocento"
+  rel="stylesheet">
+  <script src="assets/javascript/map.js"></script>
+ <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <!-- <script src="assets/javascript/map.js"></script> -->
+<!--  -->
   <title>Place Search Pagination</title>
 
-  <header>Never Fear Your Results Are Here!</header>
+  <header class ="banner">Never Fear Your Results Are Here!</header>
 
 
 </head>
 
 <body>
   <ul class="nav">
-    <li class="nav-item">
+    <li class="nav-item text-center">
       <h3><a class="nav-link active" href="index.html">Home</a></h3>
     </li>
-    <li class="nav-item">
+    <li class="nav-item text-center">
       <h3><a class="nav-link" href="blog.html">Blog</a></h3>
     </li>
-    <li class="nav-item">
+    <li class="nav-item text-center">
       <h3><a class="nav-link" href="contact.html">Team Contact</a></h3>
     </li>
-    <li class="nav-item">
+    <li class="nav-item text-center">
       <h3><a class="nav-link" href="placesTest.html">Map Out Your Trip</a></h3>
+    </li>
+    <li class="nav-item text-center">
+      <h3><a class="nav-link" href="userStories.html">Beer Stories</a></h3>
     </li>
   </ul>
 
@@ -49,6 +56,8 @@
       </div>
     </div>
   </div>
+
+  <div id="bannerForEntries">Click on the Bars Below to Add/Remove Them to Your Bar Crawl!</div>
 
   <div id="selection">
     <button type="submit" id="submitButton">Submit</button>
