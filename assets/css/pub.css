@@ -260,6 +260,9 @@ li:nth-child(odd) {
     margin-top: 40px;
     font-weight: bolder;
     margin-bottom: 40px;
+    background-color: black;
+    opacity: .9;
+    padding: 10px;
 }
 
 th {
