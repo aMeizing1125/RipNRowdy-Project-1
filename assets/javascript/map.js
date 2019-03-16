@@ -201,13 +201,6 @@ var database = firebase.database();
 $("#submitButton").on("click", function(){
   event.preventDefault();
   keys = Object.keys(selectedBars);
-  database.ref().push(selectedBars);
-  console.log(selectedBars);
-});
-
-database.ref().on('value', function(snapshot) {
-  snapshot.forEach(function(thisCrawl) {
-    thisCrawl = $("<p>").text(thisCrawl.val().bars);
-    $("yourCrawl").append(thisCrawl);
-});
+  database.ref().set(selectedBars);
+  console.log(keys);
 });
