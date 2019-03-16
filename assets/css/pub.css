@@ -121,7 +121,7 @@ li:nth-child(odd) {
 }
 
 .selected{
-    border: 8px solid #3f704d;
+    border: 8px solid rgb(53, 148, 53);
 }
 
 .bar img {
@@ -233,7 +233,7 @@ li:nth-child(odd) {
 }
 
 #more {
-    background-color: rgb(30, 143, 30);
+    background-color: rgb(53, 148, 53);
     background-size: 50% 50%;
     background-repeat: repeat;
     font-size: 30px;
