@@ -39,7 +39,7 @@ h6 {
 .carousel {
   margin: auto;
   margin-top: 40px;
-  max-width: 760px;
+  max-width: 900px;
   float: center;
 }
 
@@ -193,5 +193,26 @@ footer {
 
 a {
   text-decoration-color: none;
-  color: green;
+  color: rgb(53, 148, 53);
+}
+
+.turnGreen {
+  color: rgb(53, 148, 53);
+  font-style: bold;
+}
+
+.beerStoriesBody {
+padding-left: 25px;
+padding-right: 25px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
