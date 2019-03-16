@@ -205,5 +205,15 @@ $("#submitButton").on("click", function(){
   // console.log(keys);
 });
 
+var ref = firebase.database().ref('bars/');
+
+ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
+
+
 // var myJSON = JSON.stringify(selectedBars);
 // document.getElementById("testBars").innerHTML = myJSON
