@@ -206,6 +206,7 @@ $("#submitButton").on("click", function(){
   console.log(selectedBars);
 });
 
+<<<<<<< HEAD
 database.ref().on('value', function(snapshot) {
   snapshot.forEach(function(thisCrawl) {
     // thisCrawl = $("<p>").text(thisCrawl.val().bars);
@@ -213,6 +214,15 @@ database.ref().on('value', function(snapshot) {
     thisCrawl = $("<p>").text(thisCrawl.name.val().bars);
     $("yourCrawl").append(thisCrawl);
 });
+=======
+var ref = firebase.database().ref('bars/');
+
+ref.on("value", function(snapshot) {
+  // console.log(snapshot.val());
+  document.getElementById("testBars").innerHTML = JSON.stringify(snapshot.val());
+}, function (error) {
+  //  console.log("Error: " + error.code);
+>>>>>>> 6354cfaf3ce1d99fb474b6deb6cfdacb2204f874
 });
 
 
