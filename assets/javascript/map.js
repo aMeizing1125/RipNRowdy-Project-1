@@ -429,16 +429,33 @@ firebase.initializeApp(config);
 //Defining the database
 var database = firebase.database();
 
-$("#submitButton").on("click", function(){
-  event.preventDefault();
-  keys = Object.keys(selectedBars);
-  database.ref().push(selectedBars);
-  console.log(selectedBars);
-});
-
 database.ref().on('value', function(snapshot) {
   snapshot.forEach(function(thisCrawl) {
     thisCrawl = $("<p>").text(thisCrawl.val().bars);
     $("yourCrawl").append(thisCrawl);
 });
 });
+
+function PrintElem(elem)
+{
+    var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+
+    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+    mywindow.document.write('</head><body >');
+    mywindow.document.write('<h1>' + document.title  + '</h1>');
+    mywindow.document.write(document.getElementById(elem).innerHTML);
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+
+    return true;
+}
+
+$("#submitButton").on("click", function(){
+  PrintElem("table");
+});
+
