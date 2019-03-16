@@ -35,11 +35,20 @@ database.ref().on('value', function (snapshot) {
     console.log(beerStory.val().brewery);  //it works!!
     var createDiv; 
     var createH3;
+    var createH6;
     var createP;
     var bStoryName = beerStory.val().name;
-    var bStoryBrewer = beerStory.val().brewery;
-    var bStoryBrewer = beerStory.val().story;
+    var bStoryBrewery = beerStory.val().brewery;
+    var bStory = beerStory.val().story;
     // console.log(bStoryName.brewery);
+    createDiv = $('<div>');
+    createH3 = $('<h3>').text(bStoryName);
+    createH6 = $('<h6>').text(bStoryBrewery);
+    createP = $('<p>').text(bStory);
+    createDiv.append(createH3, createH6, createP);
+
+$('#addBeerStoriesHere').prepend(createDiv);
+$('')
 
   })
 })
