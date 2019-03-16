@@ -8,9 +8,9 @@ body {
 }
 
 header {
-    color: antiquewhite;
+    color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 36px;
     margin-bottom: 25px;
     font-weight: bolder;
     margin-top: 40px;
@@ -18,7 +18,7 @@ header {
     opacity: .9; 
     padding: 20px;
     float: center;
-    font-family: 'Cormorant Upright', serif;
+    font-family: 'Abril Fatface', cursive;
 }
 
 h2 {
