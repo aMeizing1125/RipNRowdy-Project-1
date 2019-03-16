@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-  <script src="app.js"></script>
+  
 
 </head>
 
@@ -50,8 +50,8 @@
         <div class="col teamBio">
           <h3><strong>Mei Hampton</strong></h3>
           <h6>
-            <p>paragraph about mei</p>
-            <p><a href="#">exampleEmail@here.com</a></p>
+            <p>Mei was our Project Manager, and GitHub master. She helped with resolving most of the conflicts on Git Hub and worked on floating around with all of the different areas.</p>
+            <p><a href="#">hampton.muriel@gmail.com</a></p>
           </h6>
         </div>
         <div>
@@ -60,8 +60,8 @@
         <div class="col teamBio">
           <h3><strong>Alyssa Szutz</strong></h3>
           <h6>
-            <p>paragraph about alyssa</p>
-            <p><a href="#">exampleEmail@here.com</a></p>
+            <p>Alyssa mostly worked on the front end. Putting together the main page layout, functionallity, and keeping the site uniform.</p>
+            <p><a href="#">aaszutz@gmail.com</p></a>
           </h6>
         </div>
       </div>
@@ -69,23 +69,23 @@
       <div class="container boyInfo">
           <div class="row">
             <div>
-              <img src="assets/images/mei.jpg" class="teamPhotos">
-            </div>
-            <div class="col teamBio">
-              <h3><strong>Jonathan King</strong></h3>
-              <h6>
-                <p>paragraph about jonathan</p>
-                <p><a href="#">exampleEmail@here.com</a></p>
-              </h6>
-            </div>
-            <div>
-              <img src="assets/images/Alyssa1.jpg" class="teamPhotos">
+              <img src="assets/images/tylerProfilePic.png" class="teamPhotos">
             </div>
             <div class="col teamBio">
               <h3><strong>Tyler Edge</strong></h3>
               <h6>
-                <p>paragraph about tyler</p>
-                <p><a href="#">exampleEmail@here.com</a></p>
+                <p>Tyler was our biggest floater. He worked on everything - majorly including mostly the firebase and api aspects</p>
+                <p><a href="#">tylercedge@gmail.com</a></p>
+              </h6>
+            </div>
+            <div>
+              <img src="assets/images/jonathansProjectPic.jpg" class="teamPhotos">
+            </div>
+            <div class="col teamBio">
+              <h3><strong>Jonathan King</strong></h3>
+              <h6>
+                <p>Jonathan worked mostly on API functionallity, and did the content editing. Along with helping out where needed in other areas as well.</p>
+                <p><a href="#">imjonathanking@gmail.com</a></p>
               </h6>
             </div>
           </div>
@@ -164,24 +164,24 @@
       <!-- Form -->
       <form>
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5 " for="">Name: </label>
+          <label class="text-success font-weight-bolder pl-5 " for="name">Name: </label>
 
-          <input type="text" class="form-control" id="newTrain" required>
+          <input type="text" class="form-control" id="formName" required>
         </div>
 
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Email: </label>
-          <input type="text" class="form-control" id="newDestination" required>
+          <label class="text-success font-weight-bolder pl-5" for="email">Email: </label>
+          <input type="text" class="form-control" id="formEmail" required>
+        </div>      
+
+        <div class="form-group">
+          <label class="text-success font-weight-bolder pl-5" for="brewery">Brewery: </label>
+          <input type="text" class="form-control" id="formBrewery" required>
         </div>
 
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Brewery: </label>
-          <input type="text" class="form-control" id="firstArrival" required>
-        </div>
-
-        <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Story: </label>
-          <input type="text" class="form-control storyInput" id="newFrequency" required>
+          <label class="text-success font-weight-bolder pl-5" for="story">Story: </label>
+          <input type="text" class="form-control storyInput" id="formStory" required>
         </div>
         <div class="center-block">
           <button type="submit" class="btn btn-success center-block col-lg-12 col-md-12 col-sm-12 col-12 p-3"
@@ -208,8 +208,10 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <!-- I can't remember where to put this stupid firebase script. -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-  <script src="assets/javascript/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> -->
+  <script src="assets/javascript/contact.js"></script>
+  
 
 </body>
 

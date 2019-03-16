@@ -41,6 +41,13 @@ li:nth-child(odd) {
     background-color: #fcfcfc;
 } */
 
+#selection{
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .nav{
     border:1px solid #ccc;
     border-width:1px 0;
