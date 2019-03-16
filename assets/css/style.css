@@ -193,5 +193,10 @@ footer {
 
 a {
   text-decoration-color: none;
-  color: green;
+  color: rgb(53, 148, 53);
+}
+
+.turnGreen {
+  color: rgb(53, 148, 53);
+  font-style: bold;
 }
