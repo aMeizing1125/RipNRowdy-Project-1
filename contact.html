@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-  <script src="app.js"></script>
+  
 
 </head>
 
@@ -164,24 +164,24 @@
       <!-- Form -->
       <form>
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5 " for="">Name: </label>
+          <label class="text-success font-weight-bolder pl-5 " for="name">Name: </label>
 
-          <input type="text" class="form-control" id="newTrain" required>
+          <input type="text" class="form-control" id="formName" required>
         </div>
 
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Email: </label>
-          <input type="text" class="form-control" id="newDestination" required>
+          <label class="text-success font-weight-bolder pl-5" for="email">Email: </label>
+          <input type="text" class="form-control" id="formEmail" required>
+        </div>      
+
+        <div class="form-group">
+          <label class="text-success font-weight-bolder pl-5" for="brewery">Brewery: </label>
+          <input type="text" class="form-control" id="formBrewery" required>
         </div>
 
         <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Brewery: </label>
-          <input type="text" class="form-control" id="firstArrival" required>
-        </div>
-
-        <div class="form-group">
-          <label class="text-success font-weight-bolder pl-5" for="">Story: </label>
-          <input type="text" class="form-control storyInput" id="newFrequency" required>
+          <label class="text-success font-weight-bolder pl-5" for="story">Story: </label>
+          <input type="text" class="form-control storyInput" id="formStory" required>
         </div>
         <div class="center-block">
           <button type="submit" class="btn btn-success center-block col-lg-12 col-md-12 col-sm-12 col-12 p-3"
@@ -208,8 +208,10 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <!-- I can't remember where to put this stupid firebase script. -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-  <script src="assets/javascript/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> -->
+  <script src="assets/javascript/contact.js"></script>
+  
 
 </body>
 
