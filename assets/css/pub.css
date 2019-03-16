@@ -266,6 +266,21 @@ th {
     
 }
 
+@media only screen and (max-width: 625px) {
+    div #weather-backdrop {
+      /* visibility: hidden; */
+      /* z-index: -1; */
+      width: 100%;
+
+    }
+    div #weather-backdrop #weather {
+        /* visibility: hidden; */
+        /* z-index: -.99; */
+        width: 100%;
+    }
+  }
+  
+
 
 
 
