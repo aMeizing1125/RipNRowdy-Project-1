@@ -201,9 +201,7 @@ var database = firebase.database();
 $("#submitButton").on("click", function(){
   event.preventDefault();
   keys = Object.keys(selectedBars);
-  database.ref().push({
-    bars: Object.keys(selectedBars)
-});
+  database.ref().push(selectedBars);
   console.log(selectedBars);
 });
 
