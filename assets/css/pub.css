@@ -1,5 +1,5 @@
 body {
-    background: url(../images/pubwallpaper.jpg) no-repeat center center fixed;
+    background: url(../images/blogBackground.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,6 +13,12 @@ header {
     font-size: 50px;
     margin-bottom: 25px;
     font-weight: bolder;
+    margin-top: 40px;
+    background-color: black;
+    opacity: .9; 
+    padding: 20px;
+    float: center;
+    font-family: 'Cormorant Upright', serif;
 }
 
 h2 {
@@ -44,7 +50,9 @@ li:nth-child(odd) {
 #selection{
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 }
+
 
 
 
@@ -56,9 +64,16 @@ li:nth-child(odd) {
     padding: 0;
     text-align: center;
     justify-content: center;
+    margin-top: 40px;
     background-color: black; 
     opacity: .9;
-}
+    font-family: 'Cormorant Upright', serif;
+    margin-bottom: 40px;
+    font-size: 25px;
+    width: 100%;
+    font-weight: inherit;
+
+  }
 
 .nav li{
     position: relative;
@@ -66,23 +81,23 @@ li:nth-child(odd) {
     text-align: center;
     float: center;
     margin-left: 20px;
-}
-.nav a{
+  }
+
+  .nav a{
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     float: center;
     color: white; 
     text-decoration: inherit; 
     margin: 0;
     margin-top: 0;
-}
-
-.nav ul {
+  }
+  .nav ul {
     text-align: center;
     display: block;
     float: center;
-}
+  }
 
 .bar {
     width: 300px;
@@ -223,13 +238,6 @@ li:nth-child(odd) {
     border-radius: 20px;
 }   
 
-.banner {
-    margin-top: 40px;
-    background-color: black;
-    opacity: .9; 
-    padding: 20px;
-    float: center;
-}
 
 #table {
     margin-bottom: 40px;
@@ -240,12 +248,19 @@ li:nth-child(odd) {
 #bannerForEntries {
     color: antiquewhite;
     text-align: center;
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 40px;
     font-weight: bolder;
+    margin-bottom: 40px;
 }
 
 th {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 35px;
+
 }
+
+
+
+
+
