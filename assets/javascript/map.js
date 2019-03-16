@@ -35,10 +35,10 @@ $.ajax({
   .then(function (response) {
 
     // Log the queryURL
-    console.log(queryURL);
+    // console.log(queryURL);
 
     // Log the resulting object
-    console.log(response);
+    // console.log(response);
 
     // Creates div tags for information
     $(".city").html("<h1>" + response.name + " Weather Details</h1>");
@@ -134,13 +134,13 @@ function createMarkers(places) {
       'maxHeight': 300
     });
 
-    console.log(thisImageUrl);
+    // console.log(thisImageUrl);
     thisImage = $("<img>").attr("src", thisImageUrl);
 
     thisBar.append(thisRating, thisImage);
     $("#displayResults").prepend(thisBar);
 
-    console.log(place);
+    // console.log(place);
 
     bounds.extend(place.geometry.location);
   }
@@ -151,7 +151,7 @@ function createMarkers(places) {
 function renderTable(){
   $("#tableBody").empty();
   keys = Object.keys(selectedBars);
-  console.log(keys);
+  // console.log(keys);
   for (i = 0; i < keys.length; i++){
     thisKey = keys[i];
     thisBar = selectedBars[thisKey];
@@ -171,11 +171,11 @@ function allowClicks(){
   $(".bar").on("click", function(){
     thisBar = $(this);
     thisBarName = thisBar.attr("data-name");
-    console.log(thisBarName);
+    // console.log(thisBarName);
 
-    console.log(thisBar);
+    // console.log(thisBar);
     if (thisBar.hasClass("selected")){
-      console.log("already selected");
+      // console.log("already selected");
       delete selectedBars[thisBarName];
     }
 
@@ -193,12 +193,12 @@ function allowClicks(){
     }
     
     thisBar.toggleClass("selected");
-    console.log(selectedBars);
+    // console.log(selectedBars);
     renderTable();
   });
 }
 
 $("#submitButton").on("click", function(){
   keys = Object.keys(selectedBars);
-  console.log(keys);
+  // console.log(keys);
 });

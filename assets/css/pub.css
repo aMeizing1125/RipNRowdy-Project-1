@@ -123,7 +123,8 @@ li:nth-child(odd) {
 }
 
 #barChoices {
-  background-color: white;
+  background-color: antiquewhite;
+  
   /* align-content: center;
   justify-content: center;
   text-align: center;
