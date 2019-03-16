@@ -1,6 +1,17 @@
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
+  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
+  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
+  projectId: "bar-crawl-project-f4740",
+  storageBucket: "bar-crawl-project-f4740.appspot.com",
+  messagingSenderId: "917856200360"
+};
+
+firebase.initializeApp(config);
+
+//Defining the database
+var database = firebase.database();
 
 var selectedBars = {};
 
@@ -44,34 +55,6 @@ $.ajax({
     // console.log("Humidity: " + response.main.humidity);
     // console.log("Temperature (F): " + response.main.temp);
   });
-
-
-var config = {
-  apiKey: "AIzaSyBtfleJjantBqTZXzSJnvMJGU6_pMAonPY",
-  authDomain: "bar-crawl-project-f4740.firebaseapp.com",
-  databaseURL: "https://bar-crawl-project-f4740.firebaseio.com",
-  projectId: "bar-crawl-project-f4740",
-  storageBucket: "bar-crawl-project-f4740.appspot.com",
-  messagingSenderId: "917856200360"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-
-$('#submit').on('click', function (event) {
-  event.preventDefault();
-  var trainName = $('#trainInput').val().trim();
-  var destination = $('#destinationInput').val().trim();
-  var firstTrainTime = $('#trainTimeInput').val().trim();
-  var frequency = $('#frequencyInput').val().trim();
-
-  database.ref().push({
-    train: trainName,
-    destination: destination,
-    trainTime: firstTrainTime,
-    frequency: frequency
-  });
-});
 
 var map;
 
@@ -214,3 +197,8 @@ function allowClicks(){
     renderTable();
   });
 }
+
+$("#submitButton").on("click", function(){
+  keys = Object.keys(selectedBars);
+  console.log(keys);
+});

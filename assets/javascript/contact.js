@@ -12,15 +12,25 @@ var config = {
   messagingSenderId: "376710116624"
 };
 firebase.initializeApp(config);
+var database = firebase.database();
 
 // ----- GLOBAL VARIABLES ----- //
-var name; 
-var emailAddress;
-var brewery;
-var story; 
 
 
+$('#submit').on("click", function() {
+  var customer = {
+    name:  $('#formName').val().trim(),
+    emailAddress: $('#formEmail').val().trim(),
+    brewery: $('#formBrewery').val().trim(),
+    story: $('#formStory').val().trim(),
+  }
+  database.ref().push(customer);
+  }
+  
+)
 
+//testing because i set database up so you couldn't read or write it. 
+// database.ref().on('value', function (snapshot) {
+// console.log(snapshot);
+// })
 
-// ----- BUTTON CONTROLS ----- //
-$('').val().trim();
