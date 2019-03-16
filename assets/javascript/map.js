@@ -142,6 +142,7 @@ function renderTable(){
     thisBar = selectedBars[thisKey];
   
     newRow = $("<tr>");
+    // there is an error when pulling the object. I have tried several options to resolve the issue. dot notation bracket notation. 
     thisName = $("<td>").text(thisBar.name);
     thisRating = $("<td>").text(thisBar.rating);
     thisAddress = $("<td>").text(thisBar.address);
@@ -178,7 +179,7 @@ function allowClicks(){
     }
     
     thisBar.toggleClass("selected");
-    // console.log(selectedBars);
+    console.log(selectedBars);
     renderTable();
   });
 }
@@ -201,19 +202,18 @@ var database = firebase.database();
 $("#submitButton").on("click", function(){
   event.preventDefault();
   keys = Object.keys(selectedBars);
-  database.ref('bars/').set(selectedBars);
-  // console.log(keys);
+  database.ref().push(selectedBars);
+  console.log(selectedBars);
 });
 
-var ref = firebase.database().ref('bars/');
-
-ref.on("value", function(snapshot) {
-  console.log(snapshot.val());
-}, function (error) {
-   console.log("Error: " + error.code);
+database.ref().on('value', function(snapshot) {
+  snapshot.forEach(function(thisCrawl) {
+    // thisCrawl = $("<p>").text(thisCrawl.val().bars);
+    // $("yourCrawl").append(thisCrawl);
+    thisCrawl = $("<p>").text(thisCrawl.name.val().bars);
+    $("yourCrawl").append(thisCrawl);
+});
 });
 
 
-
-// var myJSON = JSON.stringify(selectedBars);
-// document.getElementById("testBars").innerHTML = myJSON
+var 

@@ -18,6 +18,7 @@ var database = firebase.database();
 
 
 $('#submit').on("click", function() {
+  event.preventDefault(); //prevents hitting enter and submitting
   var customer = {
     name:  $('#formName').val().trim(),
     emailAddress: $('#formEmail').val().trim(),
@@ -28,6 +29,21 @@ $('#submit').on("click", function() {
   }
   
 )
+database.ref().on('value', function (snapshot) {
+  $('#addBeerStoriesHere').empty();
+  snapshot.forEach(function (beerStory) {
+    console.log(beerStory.val().brewery);  //it works!!
+    var createDiv; 
+    var createH3;
+    var createP;
+    var bStoryName = beerStory.val().name;
+    var bStoryBrewer = beerStory.val().brewery;
+    var bStoryBrewer = beerStory.val().story;
+    // console.log(bStoryName.brewery);
+
+  })
+})
+
 
 //testing because i set database up so you couldn't read or write it. 
 // database.ref().on('value', function (snapshot) {
