@@ -26,5 +26,5 @@ database.ref().on('value', function (snapshot) {
     // var bStoryName = snapshot.name;
     // console.log(bStoryName);
 
-  })
-})
+  });
+});
